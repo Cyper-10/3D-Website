@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated WebPage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
+    <style>
+        body {
+            background-color: #ffb6c1; /* Light pink background */
+            margin: 0;
+            overflow: hidden; /* Prevents scrollbars */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Remove extra icon */
+        .extra-icon {
+            display: none;
+        }
+
+        /* Full-screen Nintendo Switch */
+        spline-viewer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* Push it to the background */
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            padding: 10px 20px;
+            background: linear-gradient(to right, #ff0080, #ff8c00);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="logo">Logo</h1>
+        <ul class="menu">
+            <li>Home</li>
+            <li>App</li>
+            <li>Work</li>
+        </ul>
+        <button class="btn1">Connect</button>
+    </nav>
+
+    <!-- Nintendo Switch Model in Background -->
+    <spline-viewer url="https://prod.spline.design/aAY4gklMZK0MsQMm/scene.splinecode"></spline-viewer>
+
+</body>
+</html>
+
